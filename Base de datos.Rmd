@@ -1,0 +1,113 @@
+---
+title: "Me quiero morir"
+author: "Cynthia Villanueva Gaston"
+date: "10/30/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+setwd("~/Estadística 2/Trabajo grupal/Base de datos")
+```
+
+```{r}
+library(rio)
+modulo2=import("Modulo 2.sav")
+modulo3=import("Modulo 3.sav")
+modulo4=import("Modulo 4.sav")
+modulo5=import("Modulo 5.sav")
+modulo6=import("Modulo 6.sav")
+modulo7=import("Modulo 7.sav")
+```
+
+```{r}
+str(modulo2$NOMBDEPA)
+```
+
+```{r}
+library(dplyr)
+```
+
+```{r}
+modulo2 = filter(modulo2, NOMBDEPA == "CALLAO" | NOMBDEPA == "LIMA")  %>%  select(., NOMBDEPA, VIVIENDA, HOGAR, CODPERSO, P204, P205_A) 
+```
+
+```{r}
+modulo3 = filter(modulo3, NOMBDEPA == "CALLAO" | NOMBDEPA == "LIMA")  %>%  select(., NOMBDEPA, VIVIENDA, HOGAR, CODPERSO, P304,P315_1,P315_2, P315_3, P315_4, P315_5, P315_6, P315_7, P315_8, P315_9, P315_10) 
+```
+
+```{r}
+modulo4 = filter(modulo4, NOMBDEPA == "CALLAO" | NOMBDEPA == "LIMA")  %>%  select(., NOMBDEPA, VIVIENDA, HOGAR, CODPERSO, P401_1, P401_2, P401_3, P401_4, P401_5, P408_1, P408_2, P408_3,P408_4, P408_5, P408_6 ) 
+```
+
+```{r}
+modulo5 = filter(modulo5, NOMBDEPA == "CALLAO" | NOMBDEPA == "LIMA")  %>%  select(., NOMBDEPA, VIVIENDA, HOGAR, CODPERSO, P501, P510, P512, P513  ) 
+```
+
+```{r}
+modulo6 = filter(modulo6, NOMBDEPA == "CALLAO" | NOMBDEPA == "LIMA")  %>%  select(., NOMBDEPA, VIVIENDA, HOGAR, CODPERSO, P604_1, P604_2, P604_3, P604_4, P604_5, P604_6, P604_7, P604_8, P604_9, P604_10, P604_11, P609, P611, P614_MON, P614_ESP, P615_MON, P615_ESP, P616_MON, P616_ESP) 
+```
+
+```{r}
+modulo7 = filter(modulo7, NOMBDEPA == "CALLAO" | NOMBDEPA == "LIMA")  %>%  select(., NOMBDEPA, VIVIENDA, HOGAR, CODPERSO, P701)
+```
+
+```{r}
+base = modulo2 %>% left_join(modulo3)
+base = base %>% left_join(modulo4)
+base = base %>% left_join(modulo5)
+base = base %>% left_join(modulo6)
+base = base %>% left_join(modulo7)
+```
+
+
+```{r}
+base$P204=as.factor(base$P204)
+str(base$P204)
+levels(base$P204)=c("Hombre", "Mujer")
+table(base$P204)
+```
+
+```{r}
+base$P304=as.factor(base$P304)
+levels(base$P304)=c("Si", "No")
+table(base$P304)
+```
+
+```{r}
+base$P510=as.factor(base$P510)
+levels(base$P510)=c("Si", "No")
+table(base$P510)
+```
+
+```{r}
+base$P512=as.factor(base$P512)
+levels(base$P512)=c("Indígena", "Afrodescendiente", "Blanco/a", "Mestizo/a", "Grupo étnico", "Otro", "No sabe")
+table(base$P512)
+```
+
+```{r}
+base$P513=as.factor(base$P513)
+levels(base$P513)=c("Heterosexual", "Gay", "Lesbiana", "Bisexual", "Pansexual", "Asexual", "Otro", "No sabe")
+table(base$P513)
+```
+
+```{r}
+base$P609=as.factor(base$P609)
+levels(base$P609)=c("Si", "No")
+table(base$P609)
+```
+
+```{r}
+base$P701=as.factor(base$P701)
+levels(base$P701)=c("Si", "No")
+table(base$P701)
+```
+
+```{r}
+head(base)
+```
+
