@@ -169,6 +169,14 @@ levels(base_editada$P408_6)=c("Si", "No")
 table(base_editada$P408_6)
 ```
 
+
+```{r}
+base_editada$P501=as.factor(base_editada$P501)
+base_editada$P501 = recode(base_editada$P501, "1" = "Sin nivel" , "2" = "Preescolar", "3" =  "Educación Básica Incompleta", "4" = "Educación Básica Completa", "5" = "Educación Media Diversificada Incompleta ", "6"="Educación Media Diversificada Completa", "7"="Técnico Superior Incompleta", "8"="Técnico Superior Completa", "9"="Superior Universitaria Incompleta", "10"="Superior Universitaria Completa", "11"="Maestría/ Doctorado")
+table(base_editada$P501)
+```
+
+
 ```{r}
 base_editada$P604_1[base_editada$P604_1 == 0] <- NA
 
