@@ -1,5 +1,5 @@
 ---
-title: "Me quiero morir"
+title: "Base de datos"
 author: "Cynthia Villanueva Gaston"
 date: "10/30/2021"
 output: html_document
@@ -109,5 +109,179 @@ table(base$P701)
 
 ```{r}
 head(base)
+```
+
+```{r}
+base_editada=data.frame(base)
+```
+
+
+```{r}
+base_editada$P315 <- names(base_editada[8:16])[max.col(base_editada[8:16])]
+```
+
+```{r}
+base_editada$P315 = recode(base_editada$P315, P315_1 = "Visa de turista" , P315_2 = "Visa de trabajo", P315_3 =  "Visa de estudiante", P315_4 = "Solicitante de PTP", P315_5 = "Con Permiso Temporal de Trabajo – PTP", P315_6 = "Solicitante de refugio", P315_7= "Refugiado", P315_8="Carnet de Extranjería", P315_9="DNI", P315_10= "Otra situación")
+```
+
+```{r}
+base_editada$P401 <- names(base_editada[18:22])[max.col(base_editada[18:22])]
+```
+
+```{r}
+base_editada$P401 = recode(base_editada$P401, P401_1 = "ESSALUD" , P401_2 = "Seguro Privado de Salud", P401_3 =  "Seguro Integral de Salud - SIS", P401_4 = "Otro", P401_5 = "No está afiliado")
+```
+
+```{r}
+base_editada$P408_1=as.factor(base_editada$P408_1)
+levels(base_editada$P408_1)=c("Si", "No")
+table(base_editada$P408_1)
+```
+
+
+```{r}
+base_editada$P408_2=as.factor(base_editada$P408_2)
+levels(base_editada$P408_2)=c("Si", "No")
+table(base_editada$P408_2)
+```
+
+```{r}
+base_editada$P408_3=as.factor(base_editada$P408_3)
+levels(base_editada$P408_3)=c("Si", "No")
+table(base_editada$P408_3)
+```
+
+```{r}
+base_editada$P408_4=as.factor(base_editada$P408_4)
+levels(base_editada$P408_4)=c("Si", "No")
+table(base_editada$P408_4)
+```
+
+```{r}
+base_editada$P408_5=as.factor(base_editada$P408_5)
+levels(base_editada$P408_5)=c("Si", "No")
+table(base_editada$P408_5)
+```
+
+```{r}
+base_editada$P408_6=as.factor(base_editada$P408_6)
+levels(base_editada$P408_6)=c("Si", "No")
+table(base_editada$P408_6)
+```
+
+```{r}
+base_editada$P604_1[base_editada$P604_1 == 0] <- NA
+
+base_editada$P604_1=as.factor(base_editada$P604_1)
+levels(base_editada$P604_1)=c("Si", "No")
+table(base_editada$P604_1)
+```
+
+```{r}
+base_editada$P604_2[base_editada$P604_2 == 0] <- NA
+
+base_editada$P604_2=as.factor(base_editada$P604_2)
+levels(base_editada$P604_2)=c("Si", "No")
+table(base_editada$P604_2)
+```
+
+```{r}
+base_editada$P604_3[base_editada$P604_3 == 0] <- NA
+
+base_editada$P604_3=as.factor(base_editada$P604_3)
+levels(base_editada$P604_3)=c("Si", "No")
+table(base_editada$P604_3)
+```
+
+```{r}
+base_editada$P604_4[base_editada$P604_4 == 0] <- NA
+
+base_editada$P604_4=as.factor(base_editada$P604_4)
+levels(base_editada$P604_4)=c("Si", "No")
+table(base_editada$P604_4)
+```
+
+```{r}
+base_editada$P604_5[base_editada$P604_5 == 0] <- NA
+
+base_editada$P604_5=as.factor(base_editada$P604_5)
+levels(base_editada$P604_5)=c("Si", "No")
+table(base_editada$P604_5)
+```
+
+```{r}
+base_editada$P604_6[base_editada$P604_6 == 0] <- NA
+
+base_editada$P604_6=as.factor(base_editada$P604_6)
+levels(base_editada$P604_6)=c("Si", "No")
+table(base_editada$P604_6)
+```
+
+```{r}
+base_editada$P604_7[base_editada$P604_7 == 0] <- NA
+
+base_editada$P604_7=as.factor(base_editada$P604_7)
+levels(base_editada$P604_7)=c("Si", "No")
+table(base_editada$P604_7)
+```
+
+```{r}
+base_editada$P604_8[base_editada$P604_8 == 0] <- NA
+
+base_editada$P604_8=as.factor(base_editada$P604_8)
+levels(base_editada$P604_8)=c("Si", "No")
+table(base_editada$P604_8)
+```
+
+```{r}
+base_editada$P604_9[base_editada$P604_9 == 0] <- NA
+
+base_editada$P604_9=as.factor(base_editada$P604_9)
+levels(base_editada$P604_9)=c("Si", "No")
+table(base_editada$P604_9)
+```
+
+```{r}
+base_editada$P604_10[base_editada$P604_10 == 0] <- NA
+
+base_editada$P604_10=as.factor(base_editada$P604_10)
+levels(base_editada$P604_10)=c("Si", "No")
+table(base_editada$P604_10)
+```
+
+```{r}
+base_editada$P604_11[base_editada$P604_11 == 0] <- NA
+
+base_editada$P604_11=as.factor(base_editada$P604_11)
+levels(base_editada$P604_11)=c("Si", "No")
+table(base_editada$P604_11)
+```
+
+```{r}
+base_editada$P315_1 = NULL 
+base_editada$P315_2 = NULL 
+base_editada$P315_3 = NULL 
+base_editada$P315_4 = NULL 
+base_editada$P315_5 = NULL 
+base_editada$P315_6 = NULL 
+base_editada$P315_7 = NULL 
+base_editada$P315_8 = NULL 
+base_editada$P315_9 = NULL 
+base_editada$P315_10 = NULL 
+```
+
+```{r}
+base_editada$P401_1 = NULL
+base_editada$P401_2 = NULL
+base_editada$P401_3 = NULL
+base_editada$P401_4 = NULL
+base_editada$P401_5 = NULL
+```
+
+```{r}
+library (openxlsx)
+library(readxl)
+library(writexl)
+write.xlsx(base_editada, "Base de datos ENPOVE.xlsx")
 ```
 
