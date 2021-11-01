@@ -1,0 +1,76 @@
+---
+title: "Untitled"
+author: "Cynthia Villanueva Gaston"
+date: "11/1/2021"
+output: html_document
+---
+
+```{r}
+ENPOVE = "https://github.com/cvillanuevag/trabajo_enpove/raw/main/Base%20de%20datos%20ENPOVE.xlsx"
+library(rio)
+ENPOVE=import(ENPOVE)
+```
+
+# Cynthia: de la columna 5 al 20
+
+```{r}
+library(DescTools)
+library(e1071)
+```
+
+# Variable P204
+```{r}
+Mode(ENPOVE$P204, na.rm = T)
+```
+
+La variable P204 es el sexo de los encuestados.Al ser cuantitativa, solo podemos obtener la moda. 
+
+- Se da con mayor frecuencia que los inmigrantes venezolanos encuestados sean hombres.
+
+# Variable P205_A
+```{r}
+Mode(ENPOVE$P205_A, na.rm = T)
+mean(ENPOVE$P205_A, na.rm = T)
+Median(ENPOVE$P205_A, na.rm = T)
+```
+
+La variable P205_A es edad en años
+
+- Se da con mayor frecuencia que los inmigrantes venezolanos encuestados tengan 25 años
+- El 50% de los inmigrantes venezolanos encuestados tengan una edad menor o igual a 27 años
+- En promedio, los inmigrantes venezolanos encuestados tienen 27 años
+
+
+```{r}
+sd(ENPOVE$P205_A)
+range(ENPOVE$P205_A, na.rm = T)
+min(ENPOVE$P205_A, na.rm = T)
+max(ENPOVE$P205_A, na.rm = T)
+skewness(ENPOVE$P205_A)
+kurtosis(ENPOVE$P205_A)
+```
+
+- El 68% de los inmigrantes venezolanos encuestados tendrían edades comprendidas entre 13 y 41 años. 
+#(Media - sd y media + sd)
+
+- Las edades de los inmigrantes venezolanos encuestados van desde 0 a 93 años. El rango es de 93.
+
+- La edad mínima de los inmigrantes venezolanos encuestados es de 0 años
+
+- La edad máxima de los inmigrantes venezolanos encuestados es de 093años
+
+-Con respecto a la asimetría, la distribución de la variable de edades de los inmigrantes venezolanos encuestados es asimétrica positiva, por lo que los valores se tienden a reunir más en la parte izquierda que en la derecha de la media.
+
+-Con respecto a la curtosis, la distribución de la variable de edades de los inmigrantes venezolanos encuestados es leptocúrtica.
+# Chequea esta pagina: http://www.spssfree.com/curso-de-spss/analisis-descriptivo/medidas-de-distribucion-curtosis-asimetria.html
+
+# Variable P408_1
+```{r}
+Mode(ENPOVE$P408_1, na.rm = T)
+```
+
+```{r}
+Mode(ENPOVE$P408_1, na.rm = T)
+```
+
+# Vania: de la columna 21 al 39
