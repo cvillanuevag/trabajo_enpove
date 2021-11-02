@@ -1,33 +1,60 @@
 ---
-title: "Untitled"
-author: "Cynthia Villanueva Gaston"
+title: "Factores sociales y culturales que inciden en la probabilidad de los refugiados y migrantes venezolanos de conseguir un trabajo precario en Lima Metropolitana y Callao"
+author: "Cynthia Villanueva y Vania Ojeda"
 date: "11/1/2021"
-output: html_document
+output: rmdformats::material
 ---
 
+# Introducción
+
+En la actualidad, existen alrededor de 1,2 millones de migrantes y refugiados venezolanos en el Perú, según la data del Banco Mundial. El mayor flujo migratorio se confirma que ocurre en el año 2018, con más de la mitad de refugiados totales (635 000). Esto provocó distintas reacciones sociales, las cuales repercuten en las condiciones bajo las que esta población se adapta al contexto nacional. Estas condiciones son moldeadas a su vez, por las conductas generalizadas y psicosociales tan vívidos en el Perú, producto de procesos históricos y que como consecuencia ocasionan recurrentes divisiones y disputas en la población; estas son principalmente la misogínia y la discriminación étnica, racial y socioeconómica. Por tales motivos, la integración de la población venezolana ha sido ampliamente complicada, lo cual resulta preocupante ya que estamos hablando de un considerable número de personas, que cuentan con derechos y necesidades básicas a satisfacer. Ante tal situación, nuestro proyecto busca enfocarse en el factor laboral, ya que según datos oficiales, la mayoría de esta población debe recurrir a la precariedad laboral para poder subsistir. Esto es influenciado por distintos factores que analizaremos de forma cuantitativa, y que ayudarán a identificar las principales brechas a las que se enfrentan.
+
+# Revisión de literatura
+
+Mediante un repaso a la literatura existente en torno al tema migratorio, pudimos encontrar un concepto clave: precariedad laboral. Este fue definido por primera vez en 1974 por la OIT como la inestabilidad en el puesto de trabajo, ya sea por la inexistencia de contrato o por contratos por un tiempo determinado (Barattini, 2009).  En adición a esto, Dasten Véjar (2017),  uno de los académicos de la región que más se ha dedicado a investigar con respecto a precariedad, propone un concepto latinoamericana de empleo precario. Para él, este es un trabajo sin garantías laborales ni sociales que solo puede ser explicado a partir de la reestructuración productiva, la reforma de los sistemas salariales y las relaciones laborales. Estos elementos muestran sus efectos en la vulneración del trabajador y su desprotección en el espacio de trabajo.  En relación a esto, el concepto más cercano al adoptado para el trabajo es el de Castillo, quien sugiere que  el trabajo precario "corresponde a diversas formas de ocupaciones asalariadas y no asalariadas caracterizadas por la baja calidad, la inestabilidad en el empleo y la escasa seguridad en los ingresos o las remuneraciones" (2011, pp. 121)
+
+Otros dos conceptos que deben de ser definidos son “inmigrantes” y “refugiados”, ya que muchas veces son confundidos como sinómidos uno del otro. El artículo de Yolanda Onghena resulta útil para explicar esta diferencia. Ella menciona que “la diferencia entre “refugiado” e “inmigrante” se basa en que el movimiento del primero sería un desplazamiento forzoso y en el caso del segundo, voluntario.” (2015, pp. 2) Cabe resaltar que es una situación de peligro - tanto al huir como la posibilidad de volver- la que marca la diferencia entre ambos conceptos.
+
+El gobierno peruano cuenta con una política migratoria que intenta regular la situación laboral de los migrantes, según Lovón et. al (2021). Estos académicos, en su artículo La migración venezolana en el Perú: el discurso de la explotación laboral, mencionan que el Gobierno peruano estableció disposiciones para brindar un trabajo fijo en empresas  privadas a los venezolanos que cuenten con un Permiso Temporal de Permanencia (PTP) o Acta de Permiso de Trabajo Extraordinaria y luego podrían solicitar un carné de extranjería. Además, la Superintendencia Nacional de Fiscalización Laboral (SUNAFIL) supervisa y fiscaliza centros de trabajos donde existen venezolanos contratados para asegurarse de que no reciban un menor pago que los peruanos al realizar una labor similar. Esta entidad es importante, ya que se encarga de garantizar el respeto al derecho de los trabajadores y, a su vez, promueve el cumplimieto de las normas laborales. En relación a esto, la SUNAFIL en 2019  dictaminó que no se debía de exigir la autorización previa del Ministerio de Trabajo a contratos de trabajadores venezolanos con PTP. Con respecto a la normativa internacional en torno al trabajo, Culqui (2015) menciona que el Perú se encuentra alineado a ellas y cuenta con normas que regulan la inmigración de los trabajadores. Sin embargo, estas normas “estas normas no necesariamente se ajustan a la normativa internacional que el Perú ha ratificado, debiendo ser revisadas y actualizadas, de modo que aseguren una protección adecuada de los derechos humanos de los migrantes, en este caso los derechos laborales''. (pp. 6) A raíz de todo esto, Lovón et. at. (2021) concluyen que, pese a todo estos avances, la situación laboral de los venezolanos es precaria.
+
+Por otro lado, en relación a la situación laboral de los inmigrantes venezolanos, Lovón et. al (2021) también afirman que de los 50000 venezolanos que conforman la fuerza laboral, solamente 4500 han sido contratados formalmente y figuran en la planilla electrónica del Ministerio de Trabajo y el resto se encuentra en el mercado informal. Este dato es relevante, ya que nos brinda información actualizada al ser uno de los papers más recientes. Es así como podemos concluir que el panorama con respecto a los inmigrantes venezolanos es preocupante, ya que el mercado informal es el que más asegura un trabajo precario y se encuentran en una situación de extrema vulnerabilidad.
+
+# Objetivos
+
+El presente trabajo se ha elaborado con la finalidad de identificar las variables que influyen en la posibilidad de que los inmigrantes venezolanos obtengan un trabajo precario. Nuestro objetivo principal es evidenciar y concientizar sobre las complicaciones que afronta la población migrante, frente a las obstrucciones que impone nuestra sociedad. Dentro de este objetivo encontramos distintas subcategorías, las cuales corresponden a factores que influyen o que se pueden evidenciar a partir del estudio de nuestro objetivo principal. En primer lugar, buscamos identificar cómo distintas características demográficas pueden influir, ya sea en conjunto o de forma individual, sobre las posibilidades de que un migrante labore de forma precaria. Entre estas características se pueden encontrar el nivel de estudios, nivel socioeconómico, etnia, género, orientación sexual, edad, entre otros. En segundo lugar, tenemos como objetivo concientizar acerca de cómo los problemas sociales peruanos, afectan también, e incluso en mayor medida, a personas en condición de migrantes. Estos son principalmente, racismo , clasismo y misoginia; históricamente la sociedad se ha visto jerarquizada y dividida por estas problemáticas, que a la vez determinan las jerarquías que también someten a las personas migrantes. Por último, buscamos evidenciar la fuerte problemática de informalidad en el país, la cual se ha visto agravada por las olas de inmigrantes, debido a la escasez de trabajo y a la falta de oportunidades que han tenido al llegar al país. Esta informalidad no afecta únicamente a personas migrantes sino también a los ciudadanos ya nacionalizados; sin embargo, se añade a las ya tantas dificultades que deben afrontar para poder instalarse en el Perú. Finalmente, hemos situado nuestra investigación únicamente en los distritos de Lima Metropolitana y Callao, puesto que poseen mayor cantidad de personas migrantes y también mayores índices de informalidad. En este sentido, nuestra pregunta de investigación será:
+
+¿Qué factores sociales y culturales inciden en la probabilidad de los inmigrantes venezolanos de conseguir un trabajo precario en Lima Metropolitana y Callao ?
+
+# Hipótesis
+
+Como hipótesis sostenemos que, efectivamente, para la población venezolana existen mayores posibilidades de conseguir un trabajo precario. Esto podemos evidenciarlo por ejemplo en el aumento y concentración de la pobreza y extrema pobreza en este sector de la población, debido a que poseen menores herramientas para subsistir gracias a su condición de migrante. Ante esta pobreza, las personas suelen optar por cuales sean las oportunidades que se presenten, ya que caso contrario, no tendrían los medios para sobrevivir. En este sentido, sostenemos que dichas oportunidades están fuertemente limitadas debido a la condición de migrantes, principalmente, ya que genera desconfianza en los empleadores debido a los estigmas xenofóbicos en la sociedad, además de su situación migratoria. Además, existen estigmas transversales, referidos al género, raza, etnia, condición social, entre otros. Consideramos que, todos estos, en cierta medida contribuyen a que las posibilidades de conseguir un trabajo precario, aumenten, puesto que difícilmente lograrán ocupar un puesto de trabajo formal. Otro aspecto importante es que, como mencionamos anteriormente, al estar bajo fuertes condiciones de pobreza, aceptan trabajar por un pago menor al que debería ser, por lo tanto, tienden a ser explotados laboralmente, ya que las oportunidades que poseen son escasas. 
+
+# Base de datos y librerías
+
 ```{r}
-ENPOVE = "https://github.com/cvillanuevag/trabajo_enpove/raw/main/Base%20de%20datos%20ENPOVE.xlsx"
 library(rio)
-ENPOVE=import(ENPOVE)
-```
-
-# Cynthia: de la columna 5 al 20
-
-```{r}
+library(rmdformats)
 library(DescTools)
 library(e1071)
 ```
 
-# Variable P204
+```{r}
+ENPOVE = "https://github.com/cvillanuevag/trabajo_enpove/raw/main/Base%20de%20datos%20ENPOVE.xlsx"
+ENPOVE=import(ENPOVE)
+```
+
+Para el presente trabajo, utilizaremos la encuesta "Encuesta Dirigida a la Población Venezolana que reside en el País" (ENPOVE) realizada por el Instituto Nacional de Estadística e Informática (INEI)  en el año 2018
+
+# Análisis descriptivo de variables 
+
+## Variable P204
 ```{r}
 Mode(ENPOVE$P204, na.rm = T)
 ```
 
-La variable P204 es el sexo de los encuestados.Al ser cuantitativa, solo podemos obtener la moda. 
-
 - Se da con mayor frecuencia que los inmigrantes venezolanos encuestados sean hombres.
 
-# Variable P205_A
+## Variable P205_A
 ```{r}
 Mode(ENPOVE$P205_A, na.rm = T)
 mean(ENPOVE$P205_A, na.rm = T)
@@ -51,7 +78,6 @@ kurtosis(ENPOVE$P205_A)
 ```
 
 - El 68% de los inmigrantes venezolanos encuestados tendrían edades comprendidas entre 13 y 41 años. 
-#(Media - sd y media + sd)
 
 - Las edades de los inmigrantes venezolanos encuestados van desde 0 a 93 años. El rango es de 93.
 
@@ -62,15 +88,418 @@ kurtosis(ENPOVE$P205_A)
 -Con respecto a la asimetría, la distribución de la variable de edades de los inmigrantes venezolanos encuestados es asimétrica positiva, por lo que los valores se tienden a reunir más en la parte izquierda que en la derecha de la media.
 
 -Con respecto a la curtosis, la distribución de la variable de edades de los inmigrantes venezolanos encuestados es leptocúrtica.
-# Chequea esta pagina: http://www.spssfree.com/curso-de-spss/analisis-descriptivo/medidas-de-distribucion-curtosis-asimetria.html
 
-# Variable P408_1
+## Variable P408_1
 ```{r}
 Mode(ENPOVE$P408_1, na.rm = T)
 ```
 
+La variable P408_1 es limitación permanente para moverse o caminar
+
+- Se da con mayor frecuencia que los inmigrantes venezolanos encuestados no cuentan con una limitación permanente para  moverse o caminar, para usar brazos
+o piernas
+
+## Variable P408_2
 ```{r}
-Mode(ENPOVE$P408_1, na.rm = T)
+Mode(ENPOVE$P408_2, na.rm = T)
+```
+La variable P408_1 es limitación permanente para ver
+
+- Se da con mayor frecuencia que los inmigrantes venezolanos encuestados no cuentan con una limitación permanente para ver, aun usando anteojos.
+
+## Variable P408_3
+```{r}
+Mode(ENPOVE$P408_3, na.rm = T)
+```
+La variable P408_3 es limitación permanente para hablar o comunicarse
+
+- Se da con mayor frecuencia que los inmigrantes venezolanos encuestados no cuentan con una limitación permanente para  hablar o comunicarse, aun usando lenguaje de señas u otro.
+
+## Variable P408_4
+```{r}
+Mode(ENPOVE$P408_4, na.rm = T)
+```
+La variable P408_3 es limitación permanente para oír
+
+- Se da con mayor frecuencia que los inmigrantes venezolanos encuestados no cuentan con una limitación permanente para oír, aun usando audífonos
+
+
+## Variable P408_5
+```{r}
+Mode(ENPOVE$P408_5, na.rm = T)
+```
+La variable P408_3 es limitación permanente para entender o aprender
+
+- Se da con mayor frecuencia que los inmigrantes venezolanos encuestados no cuentan con una limitación permanente para entender o aprender (concentrarse y recordar).
+
+## Variable P408_6
+```{r}
+Mode(ENPOVE$P408_6, na.rm = T)
+```
+La variable P408_3 es limitación permanente para relacionarse con los demás
+
+- Se da con mayor frecuencia que los inmigrantes venezolanos encuestados no cuentan con una limitación permanente para relacionarse con los demás, por sus pensamientos, sentimientos, emociones o conductas
+
+
+## Variable P501
+```{r}
+Mode(ENPOVE$P501, na.rm = T)
+```
+La variable P501 es último nivel de estudios aprobado
+
+- Se da con mayor frecuencia que los inmigrantes venezolanos encuestados cuentan con Educación Media Diversificada Completa.
+
+## Variable P510
+```{r}
+Mode(ENPOVE$P510, na.rm = T)
+```
+La variable P510 es homologación de título
+
+- Se da con mayor frecuencia que los inmigrantes venezolanos encuestados no han homologado su título.
+
+
+## Variable P512
+```{r}
+Mode(ENPOVE$P512, na.rm = T)
 ```
 
-# Vania: de la columna 21 al 39
+La variable P512 es etnicidad
+
+- Se da con mayor frecuencia que los inmigrantes venezolanos encuestados se sienten o consideraon mestizos.
+
+## Variable P513
+```{r}
+Mode(ENPOVE$P513, na.rm = T)
+```
+
+La variable P512 es orientación sexual
+
+- Se da con mayor frecuencia que los inmigrantes venezolanos encuestados se consideran heterosexuales.
+
+## Variable P604_1
+```{r}
+Mode(ENPOVE$P604_1, na.rm = T)
+```
+
+La variable P604_1 es trabajo en negocio propio o de un familiar
+
+- Se da con mayor frecuencia que los inmigrantes venezolanos encuestados no han  realizado alguna actividad al menos una hora para obtener ingresos en dinero o en especie trabajando en un negocio propio o de un familiar.
+
+## Variable P604_2
+```{r}
+Mode(ENPOVE$P604_2, na.rm = T)
+```
+
+La variable P604_2 es trabajo ofreciendo servicios personales
+
+- Se da con mayor frecuencia que los inmigrantes venezolanos encuestados no han  realizado alguna actividad al menos una hora para obtener ingresos en dinero o en especie ofreciendo algún servicio personal
+
+## Variable P604_3
+```{r}
+Mode(ENPOVE$P604_3, na.rm = T)
+```
+
+La variable P604_3 es trabajo haciendo algo en casa
+
+- Se da con mayor frecuencia que los inmigrantes venezolanos encuestados no han  realizado alguna actividad al menos una hora para obtener ingresos en dinero o en especie haciendo algo en casa para vender
+
+## Variable P604_4
+```{r}
+Mode(ENPOVE$P604_4, na.rm = T)
+```
+
+La variable P604_2 es trabajo haciendo vendiendo productos de belleza, ropas, joyas, etc.
+
+- Se da con mayor frecuencia que los inmigrantes venezolanos encuestados no han  realizado alguna actividad al menos una hora para obtener ingresos en dinero o en especie vendiendo productos de belleza, ropas, joyas, etc.
+
+## Variable P604_5
+```{r}
+Mode(ENPOVE$P604_5, na.rm = T)
+```
+
+La variable P604_5 es trabajo haciendo realizando alguna labor artesanal
+
+- Se da con mayor frecuencia que los inmigrantes venezolanos encuestados no han  realizado alguna actividad al menos una hora para obtener ingresos en dinero o en especie realizando alguna labor artesanal
+
+## Variable P604_6
+```{r}
+Mode(ENPOVE$P604_6, na.rm = T)
+```
+
+La variable P604_6 es trabajo haciendo realizando prácticas pagadas en un centro de trabajo
+
+- Se da con mayor frecuencia que los inmigrantes venezolanos encuestados no han  realizado alguna actividad al menos una hora para obtener ingresos en dinero o en especie realizando  prácticas pagadas en un centro de trabajo
+
+## Variable P604_7
+
+```{r}
+Mode(ENPOVE$P604_7, na.rm = T)
+```
+
+La variable P604_7 indica si la semana pasada se realizo una actividad, por lo menos de una hora, para obtener ingresos de dinero o en especie, en este caso trabajando para un hogar particular
+
+- Se da con mayor frecuencia que los inmigrantes venezolanos no realizaron dicha actividad 
+
+
+## Variable P604_8
+
+```{r}
+Mode(ENPOVE$P604_8, na.rm = T)
+```
+La variable P604_8 indica si la semana pasada se realizo una actividad, por lo menos de una hora, para obtener ingresos de dinero o en especie, en este caso fabricando algun producto
+
+- Se da con mayor frecuencia que los inmigrantes venezolanos no realizaron dicha actividad 
+
+
+## Variable P604_9
+
+```{r}
+Mode(ENPOVE$P604_9, na.rm = T)
+```
+
+La variable P604_9 indica si la semana pasada se realizo una actividad, por lo menos de una hora, para obtener ingresos de dinero o en especie, en este caso realizando labores de chacra o cuidando animales
+
+- Se da con mayor frecuencia que los inmigrantes venezolanos no realizaron dicha actividad 
+
+
+## Variable P604_10
+
+```{r}
+Mode(ENPOVE$P604_10, na.rm = T)
+```
+La variable P604_10 indica si la semana pasada se realizo una actividad, por lo menos de una hora, para obtener ingresos de dinero o en especie, en este caso ayudando a algun familiar sin remuneración
+
+- Se da con mayor frecuencia que los inmigrantes venezolanos no realizaron dicha actividad 
+
+## Variable P604_11
+
+```{r}
+Mode(ENPOVE$P604_11, na.rm = T)
+```
+La variable P604_11 indica si la semana pasada se realizo una actividad, por lo menos de una hora, para obtener ingresos de dinero o en especie, en este caso otro tipo de actividades
+
+- Se da con mayor frecuencia que los inmigrantes venezolanos no realizaron otro tipo de actividades
+
+## Variable P609
+
+```{r}
+Mode(ENPOVE$P609, na.rm = T)
+```
+La variable P609 indica si han firmano un contrato laboral o brindado algún comprobante por servicios
+- Se da con mayor frecuencia que los inmigrantes venezolanos no realizaron dicha actividad 
+
+## Variable P611 
+```{r}
+Mode(ENPOVE$P611, na.rm = T)
+mean(ENPOVE$P611, na.rm = T)
+Median(ENPOVE$P611, na.rm = T)
+```
+La variable P611 indica la cantidad de horas que normalmente se trabaja semanalmente en todas las ocupaciones
+- Se da con mayor frecuencia que los inmigrantes venezolanos trabajan semanalmente 72 horas
+- Del total de personas encuestadas, trabajan un promedio de 53 horas semanales
+- La variable tiene una mediana de 60
+
+
+```{r}
+sd(ENPOVE$P611, na.rm = T)
+range(ENPOVE$P611, na.rm = T)
+min(ENPOVE$P611, na.rm = T)
+max(ENPOVE$P611, na.rm = T)
+skewness(ENPOVE$P611,  na.rm = T)
+kurtosis(ENPOVE$P611,  na.rm = T)
+```
+
+- El 68% de los inmigrantes venezolanos tendrían horas de trabajo semanales comprendidas entre 28 y 78 horas.
+- El rango de número de horas trabajadas semanalmente va de 0 horas a 141 horas
+- El valor mínimo de horas trabajadas es 0
+- El valor máximo de horas trabajadas son 141
+- Esta variable posee una asimetría negativa, los valores se tienden a reunir más en la parte derecha de la media.
+- Esta variable posee distribución Mesocúrtica
+
+## Variable P614_MON 
+```{r}
+Mode(ENPOVE$P614_MON, na.rm = T)
+mean(ENPOVE$P614_MON, na.rm = T)
+Median(ENPOVE$P614_MON, na.rm = T)
+```
+La variable P614_MON indica en ingreso total, en monto, sin descuentos e incluyendo horas extras, bonificaciones, pago por concepto de refrigerio, movilidad comisiones, etc
+- Se da con mayor frecuencia que los inmigrantes venezolanos ganan 250 como ingreso total
+- Del total de encuestados, la media de ingreso total es de 508.766 soles mensuales
+
+```{r}
+sd(ENPOVE$P614_MON,  na.rm = T)
+range(ENPOVE$P614_MON, na.rm = T)
+min(ENPOVE$P614_MON, na.rm = T)
+max(ENPOVE$P614_MON, na.rm = T)
+skewness(ENPOVE$P614_MON,  na.rm = T)
+kurtosis(ENPOVE$P614_MON,  na.rm = T)
+```
+- El 68% de los inmigrantes venezolanos encuestados tendrían ingresos mensuales totales comprendidos entre 53 y 965 soles.
+- Los ingresos totales se encuentran en un rango de 5 a 6000 soles mensuales
+- El valor mínimo del monto de ingresos totales es 5 mensual
+- El valor máximo de ingresos totales es de 6000 mensual
+- Esta variable posee una asimetría positiva, los valores se tienden a reunir más en la parte izquierda de la media.
+- Esta variable muestra una distribución Leptocúrtica
+
+## Variable P614_ESP 
+```{r}
+Mode(ENPOVE$P614_ESP, na.rm = T)
+mean(ENPOVE$P614_ESP, na.rm = T)
+Median(ENPOVE$P614_ESP, na.rm = T)
+```
+La variable P614_ESP indica en ingreso total, en especie, sin descuentos e incluyendo horas extras, bonificaciones, pago por concepto de refrigerio, movilidad comisiones, etc
+- Se da con mayor frecuencia que los inmigrantes venezolanos no ganan en especie
+- Los encuestados, ganan en promedio 19.51415 en especie
+
+```{r}
+sd(ENPOVE$P614_ESP,  na.rm = T)
+range(ENPOVE$P614_ESP, na.rm = T)
+min(ENPOVE$P614_ESP, na.rm = T)
+max(ENPOVE$P614_ESP, na.rm = T)
+skewness(ENPOVE$P614_ESP,  na.rm = T)
+kurtosis(ENPOVE$P614_ESP,  na.rm = T)
+```
+- El 68% de los inmigrantes venezolanos encuestados tendrían ingresos totales en especie comprendidos entre 0 y 115 años.
+- El rango de ingreso total en especie va de 0 a 1700 soles
+- El valor mínimo de ingreso total en especie es de 0 soles
+- El valor máximo de ingreso total en especie es de 1700 soles
+- Esta variable posee una asimetría positiva, los valores se tienden a reunir más en la parte izquierda de la media.
+- Esta variable muestra una distribución Leptocúrtica
+
+## Variable P615_MON 
+```{r}
+Mode(ENPOVE$P615_MON, na.rm = T)
+mean(ENPOVE$P615_MON, na.rm = T)
+Median(ENPOVE$P615_MON, na.rm = T)
+```
+La variable P615_MON indica el monto de ganancia neta del mes anterior
+- Se da con mayor frecuencia que los inmigrantes venezolanos ganaron el mes anterior, 800 soles de ganancia neta en monto
+- Los encuestados, ganaron el mes anterior, en promedio, un monto de 931.926
+
+```{r}
+sd(ENPOVE$P615_MON,  na.rm = T)
+range(ENPOVE$P615_MON, na.rm = T)
+min(ENPOVE$P615_MON, na.rm = T)
+max(ENPOVE$P615_MON, na.rm = T)
+skewness(ENPOVE$P615_MON,  na.rm = T)
+kurtosis(ENPOVE$P615_MON,  na.rm = T)
+```
+
+- El 68% de los inmigrantes venezolanos encuestados tendrían montos de ganancias netas del mes anterior comprendidas entre 372 y 1491 años.
+- El rango de ganancia neta del mes anterior, en monto, va de 140 soles a 8660 soles
+- El valor mínimo de ganancia neta del mes anterior, en monto, es de 140 soles
+- El valor máximo de ganancia neta del mes anterior, en monto, es de 8660
+- Esta variable posee una asimetría positiva, los valores se tienden a reunir más en la parte izquierda de la media.
+- Esta variable muestra una distribución Leptocúrtica
+
+## Variable P615_ESP 
+```{r}
+Mode(ENPOVE$P615_ESP, na.rm = T)
+mean(ENPOVE$P615_ESP, na.rm = T)
+Median(ENPOVE$P615_ESP, na.rm = T)
+```
+La variable P615_ESP indica la ganancia neta del mes anterior, en especie
+- Se da con mayor frecuencia que los inmigrantes venezolanos no ganaron nada en especie, el mes anterior 
+- El promedio de ganancia en especie del mes anterior es de 11,3 soles
+```{r}
+sd(ENPOVE$P615_ESP,  na.rm = T)
+range(ENPOVE$P615_ESP, na.rm = T)
+min(ENPOVE$P615_ESP, na.rm = T)
+max(ENPOVE$P615_ESP, na.rm = T)
+skewness(ENPOVE$P615_ESP,  na.rm = T)
+kurtosis(ENPOVE$P615_ESP,  na.rm = T)
+```
+- - El 68% de los inmigrantes venezolanos encuestados tendrían edades comprendidas entre 0 y 105.6 años.
+- El rango de ganancia neta, en especie, del mes anterior, va de 0 a 1900 soles
+- El valor mínimo de ganancia neta, en especie, del mes anterior es de 0 soles
+- El valor máximo de ganancia neto, en especie, del mes anterior es de 1900 soles
+- Esta variable posee una asimetría positiva, los valores se tienden a reunir más en la parte izquierda de la media.
+- Esta variable muestra una distribución Leptocúrtica
+
+## Variable P616_MON
+
+```{r}
+Mode(ENPOVE$P616_MON, na.rm = T)
+mean(ENPOVE$P616_MON, na.rm = T)
+Median(ENPOVE$P616_MON, na.rm = T)
+```
+La variable P616_MON indica el monto de ingreso en ocupaciones secundarias
+- Se da con mayor frecuencia que los inmigrantes venezolanos no ganaron nada en ocupaciones secundarias
+- Los encuestados ganaron un monto promedio de 12.59142 en ocupaciones secundarias
+
+```{r}
+sd(ENPOVE$P616_MON,  na.rm = T)
+range(ENPOVE$P616_MON, na.rm = T)
+min(ENPOVE$P616_MON, na.rm = T)
+max(ENPOVE$P616_MON, na.rm = T)
+skewness(ENPOVE$P616_MON,  na.rm = T)
+kurtosis(ENPOVE$P616_MON,  na.rm = T)
+```
+- El 68% de los inmigrantes venezolanos encuestados tendrían monto de ingresos de ocupaciones secundarias comprendidos entre 0 y 100 años.
+- El rango de ingreso en ocupaciones secundarias, en monto, va de 0 a 1500 soles 
+- El valor mínimo de monto de ingreso en ocupaciones secundarias es de 0 soles
+- El valor máximo de monto de ingreso en ocupaciones secundarias es de 1500 soles
+- Esta variable posee una asimetría positiva, los valores se tienden a reunir más en la parte izquierda de la media.
+- Esta variable muestra una distribución Leptocúrtica
+
+## Variable P616_ESP 
+
+```{r}
+Mode(ENPOVE$P616_ESP, na.rm = T)
+mean(ENPOVE$P616_ESP, na.rm = T)
+Median(ENPOVE$P616_ESP, na.rm = T)
+```
+La variable P616_ESP indica el ingreso en ocupaciones secundarias, en especie
+. Se da con mayor frecuencia que los encuestados no registran ingresos en especie, en sus ocupaciones secundarias
+```{r}
+sd(ENPOVE$P616_ESP, )
+range(ENPOVE$P616_ESP, na.rm = T)
+min(ENPOVE$P616_ESP, na.rm = T)
+max(ENPOVE$P616_ESP, na.rm = T)
+skewness(ENPOVE$P616_ESP,  na.rm = T)
+kurtosis(ENPOVE$P616_ESP,  na.rm = T)
+```
+- El 68% de los inmigrantes venezolanos encuestados tendrían ingreso de ocupaciones secundarias en especie comprendidos entre 0 y 18 años.
+- El rango de ingreso de ocupaciones secundarias en especie, va desde 0 a 1000 soles
+- El valor mínimo de ingreso de ocupaciones secundarias en especie, es de 0 soles
+- El valor máximo de ingreso de ocupaciones secundarias en especie, es de 1000 soles
+- Esta variable posee una asimetría positiva, los valores se tienden a reunir más en la parte izquierda de la media.
+- Esta variable muestra una distribución Leptocúrtica
+
+## Variable P701
+
+```{r}
+Mode(ENPOVE$P701, na.rm = T)
+```
+La variable P701 indica la cantidad de encuestados que han sufrido discriminación por ser venezolanos al llegar a Perú
+- Con mayor frecuencia, los encuestados no fueron discriminados 
+
+## Variable P315
+
+```{r}
+Mode(ENPOVE$P315, na.rm = T)
+```
+La variable P315 indica la situación migratoria de los encuestados
+- Se da con mayor frecuencia que la situacion migratoria de los encuestados es de "Solicitante de PTP"
+
+## Variable P401
+
+```{r}
+Mode(ENPOVE$P401, na.rm = T)
+```
+La variable P401 indica el sistema de seguro de salud al que el encuestado está afiliado actualmente
+- Con mayor frecuencia, los inmigrantes venezolanos no están afiliados a ningún seguro de salud
+
+
+
+# Bibliografía
+
+- Barattini, M. (2009). El trabajo precario en la era de la globalización.¿ Es posible la organización?. Polis. Revista Latinoamericana, (24).
+
+- Castillo, F. (2001). Los nuevos precarios,¿ mujeres u hombres?: Tendencias en el mercado de trabajo urbano en Panamá, 1982-1999. Papeles de población, 7(27), 99-145.
+
+- Culqui, A. (2015). Los derechos laborales de los trabajadores migrantes en el Perú. Lima. PUCP.
+
+-  Onghena, Y. (2015). ¿ Migrantes o refugiados?. Opinión CIDOB, 35, 1-5.
+
+- Vejar, D. J. (2017). Precariedad laboral en América Latina: contribuciones a un modelo pata armar. Revista Colombiana de Sociología, 40(2), 27-46.
