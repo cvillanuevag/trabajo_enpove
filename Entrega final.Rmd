@@ -1,0 +1,225 @@
+---
+title: "Factores sociales y culturales que inciden en la probabilidad de los refugiados y migrantes venezolanos de conseguir un trabajo precario en Lima Metropolitana y Callao"
+author: "Cynthia Villanueva Gaston"
+date: "11/1/2021"
+output: rmdformats::material
+---
+ 
+# Base de datos y librerías
+
+```{r}
+library(rio)
+library(DescTools)
+library(rmdformats)
+library(e1071)
+```
+
+```{r}
+ENPOVE = "https://github.com/cvillanuevag/trabajo_enpove/raw/main/Base%20de%20datos%20ENPOVE.xlsx"
+ENPOVE=import(ENPOVE)
+```
+
+## Introducción: (máximo 2 páginas)
+
+En la actualidad, existen alrededor de 1,2 millones de migrantes y refugiados venezolanos en el Perú, según la data del Banco Mundial. El mayor flujo migratorio se confirma que ocurre en el año 2018, con más de la mitad de refugiados totales (635 000). Esto provocó distintas reacciones sociales, las cuales repercuten en las condiciones bajo las que esta población se adapta al contexto nacional. Estas condiciones son moldeadas a su vez, por las conductas generalizadas y psicosociales tan vívidos en el Perú, producto de procesos históricos y que como consecuencia ocasionan recurrentes divisiones y disputas en la población; estas son principalmente la misogínia y la discriminación étnica, racial y socioeconómica. Por tales motivos, la integración de la población venezolana ha sido ampliamente complicada, lo cual resulta preocupante ya que estamos hablando de un considerable número de personas, que cuentan con derechos y necesidades básicas a satisfacer. Ante tal situación, nuestro proyecto busca enfocarse en el factor laboral, ya que según datos oficiales, la mayoría de esta población debe recurrir a la precariedad laboral para poder subsistir. Esto es influenciado por distintos factores que analizaremos de forma cuantitativa, y que ayudarán a identificar las principales brechas a las que se enfrentan.
+
+# Revisión de literatura
+
+Mediante un repaso a la literatura existente en torno al tema migratorio, pudimos encontrar un concepto clave: precariedad laboral. Este fue definido por primera vez en 1974 por la OIT como la inestabilidad en el puesto de trabajo, ya sea por la inexistencia de contrato o por contratos por un tiempo determinado (Barattini, 2009).  En adición a esto, Dasten Véjar (2017),  uno de los académicos de la región que más se ha dedicado a investigar con respecto a precariedad, propone un concepto latinoamericana de empleo precario. Para él, este es un trabajo sin garantías laborales ni sociales que solo puede ser explicado a partir de la reestructuración productiva, la reforma de los sistemas salariales y las relaciones laborales. Estos elementos muestran sus efectos en la vulneración del trabajador y su desprotección en el espacio de trabajo.  En relación a esto, el concepto más cercano al adoptado para el trabajo es el de Castillo, quien sugiere que  el trabajo precario "corresponde a diversas formas de ocupaciones asalariadas y no asalariadas caracterizadas por la baja calidad, la inestabilidad en el empleo y la escasa seguridad en los ingresos o las remuneraciones" (2011, pp. 121)
+
+Otros dos conceptos que deben de ser definidos son “inmigrantes” y “refugiados”, ya que muchas veces son confundidos como sinómidos uno del otro. El artículo de Yolanda Onghena resulta útil para explicar esta diferencia. Ella menciona que “la diferencia entre “refugiado” e “inmigrante” se basa en que el movimiento del primero sería un desplazamiento forzoso y en el caso del segundo, voluntario.” (2015, pp. 2) Cabe resaltar que es una situación de peligro - tanto al huir como la posibilidad de volver- la que marca la diferencia entre ambos conceptos.
+
+El gobierno peruano cuenta con una política migratoria que intenta regular la situación laboral de los migrantes, según Lovón et. al (2021). Estos académicos, en su artículo La migración venezolana en el Perú: el discurso de la explotación laboral, mencionan que el Gobierno peruano estableció disposiciones para brindar un trabajo fijo en empresas  privadas a los venezolanos que cuenten con un Permiso Temporal de Permanencia (PTP) o Acta de Permiso de Trabajo Extraordinaria y luego podrían solicitar un carné de extranjería. Además, la Superintendencia Nacional de Fiscalización Laboral (SUNAFIL) supervisa y fiscaliza centros de trabajos donde existen venezolanos contratados para asegurarse de que no reciban un menor pago que los peruanos al realizar una labor similar. Esta entidad es importante, ya que se encarga de garantizar el respeto al derecho de los trabajadores y, a su vez, promueve el cumplimieto de las normas laborales. En relación a esto, la SUNAFIL en 2019  dictaminó que no se debía de exigir la autorización previa del Ministerio de Trabajo a contratos de trabajadores venezolanos con PTP. Con respecto a la normativa internacional en torno al trabajo, Culqui (2015) menciona que el Perú se encuentra alineado a ellas y cuenta con normas que regulan la inmigración de los trabajadores. Sin embargo, estas normas “estas normas no necesariamente se ajustan a la normativa internacional que el Perú ha ratificado, debiendo ser revisadas y actualizadas, de modo que aseguren una protección adecuada de los derechos humanos de los migrantes, en este caso los derechos laborales''. (pp. 6) A raíz de todo esto, Lovón et. at. (2021) concluyen que, pese a todo estos avances, la situación laboral de los venezolanos es precaria.
+
+Por otro lado, en relación a la situación laboral de los inmigrantes venezolanos, Lovón et. al (2021) también afirman que de los 50000 venezolanos que conforman la fuerza laboral, solamente 4500 han sido contratados formalmente y figuran en la planilla electrónica del Ministerio de Trabajo y el resto se encuentra en el mercado informal. Este dato es relevante, ya que nos brinda información actualizada al ser uno de los papers más recientes. Es así como podemos concluir que el panorama con respecto a los inmigrantes venezolanos es preocupante, ya que el mercado informal es el que más asegura un trabajo precario y se encuentran en una situación de extrema vulnerabilidad.
+
+# Objetivos
+
+El presente trabajo se ha elaborado con la finalidad de identificar las variables que influyen en la posibilidad de que los inmigrantes venezolanos obtengan un trabajo precario. Nuestro objetivo principal es evidenciar y concientizar sobre las complicaciones que afronta la población migrante, frente a las obstrucciones que impone nuestra sociedad. Dentro de este objetivo encontramos distintas subcategorías, las cuales corresponden a factores que influyen o que se pueden evidenciar a partir del estudio de nuestro objetivo principal. En primer lugar, buscamos identificar cómo distintas características demográficas pueden influir, ya sea en conjunto o de forma individual, sobre las posibilidades de que un migrante labore de forma precaria. Entre estas características se pueden encontrar el nivel de estudios, nivel socioeconómico, etnia, género, orientación sexual, edad, entre otros. En segundo lugar, tenemos como objetivo concientizar acerca de cómo los problemas sociales peruanos, afectan también, e incluso en mayor medida, a personas en condición de migrantes. Estos son principalmente, racismo , clasismo y misoginia; históricamente la sociedad se ha visto jerarquizada y dividida por estas problemáticas, que a la vez determinan las jerarquías que también someten a las personas migrantes. Por último, buscamos evidenciar la fuerte problemática de informalidad en el país, la cual se ha visto agravada por las olas de inmigrantes, debido a la escasez de trabajo y a la falta de oportunidades que han tenido al llegar al país. Esta informalidad no afecta únicamente a personas migrantes sino también a los ciudadanos ya nacionalizados; sin embargo, se añade a las ya tantas dificultades que deben afrontar para poder instalarse en el Perú. Finalmente, hemos situado nuestra investigación únicamente en los distritos de Lima Metropolitana y Callao, puesto que poseen mayor cantidad de personas migrantes y también mayores índices de informalidad. En este sentido, nuestra pregunta de investigación será:
+
+¿Qué factores sociales y culturales inciden en la probabilidad de los inmigrantes venezolanos de conseguir un trabajo precario en Lima Metropolitana y Callao ?
+
+# Hipótesis
+
+Como hipótesis sostenemos que, efectivamente, para la población venezolana existen mayores posibilidades de conseguir un trabajo precario. Esto podemos evidenciarlo por ejemplo en el aumento y concentración de la pobreza y extrema pobreza en este sector de la población, debido a que poseen menores herramientas para subsistir gracias a su condición de migrante. Ante esta pobreza, las personas suelen optar por cuales sean las oportunidades que se presenten, ya que caso contrario, no tendrían los medios para sobrevivir. En este sentido, sostenemos que dichas oportunidades están fuertemente limitadas debido a la condición de migrantes, principalmente, ya que genera desconfianza en los empleadores debido a los estigmas xenofóbicos en la sociedad, además de su situación migratoria. Además, existen estigmas transversales, referidos al género, raza, etnia, condición social, entre otros. Consideramos que, todos estos, en cierta medida contribuyen a que las posibilidades de conseguir un trabajo precario, aumenten, puesto que difícilmente lograrán ocupar un puesto de trabajo formal. Otro aspecto importante es que, como mencionamos anteriormente, al estar bajo fuertes condiciones de pobreza, aceptan trabajar por un pago menor al que debería ser, por lo tanto, tienden a ser explotados laboralmente, ya que las oportunidades que poseen son escasas. 
+
+
+## Metodología
+
+# Población y muestra
+
+El presente reporte estadístico se realizó utilizando una metodología cuantitativa, para esto se tomó en cuenta como unidad de análisis a los venezolanos encuestados. Se ha trabajado sobre una base de datos sobre 5844 venezolanos en Lima Metropolitana y Callao. La unidad de medida de dicho proyecto es la cantidad de personas venezolanas que cuentan con un trabajo precario, para así poder analizar qué variables recurrentes influyen en que se cuente con esta condición laboral. 
+
+# Operacionalización de las variables
+
+Como variable dependiente se consideró el porcentaje de personas venezolanas que cuentan con un trabajo precario, es decir, que laboren sin los estándares mínimos dentro del sistema laboral. La data fue extraída del INEI, de la encuesta realizada en el año 2018. Para este trabajo se han considerado variables como sexo, condiciones demográficas, étnia, orientación sexual, entre otros. Hemos escogido estos datos porque consideramos que influyen en la variable dependiente. 
+
+
+# Técnicas utilizadas
+
+Una vez recolectada la información de la data a utilizar procedemos a limpiarla de los valores perdidos. Al hacerlo obtenemos que se forme una tabla de nuestra base de datos total que llamamos “Data” en donde tenemos 81 observaciones (países) y 9 variables. Después de esto se realizó un análisis descriptivo de las variables independientes para observar cómo estas se iban distribuyendo. A continuación se explicarán las técnicas que se hemos desarrollado para nuestro reporte.
+
+# Análisis factorial exploratorio
+
+La técnica de reducción elegida para el trabajo fue el análisis por factor común. El análisis factorial es una técnica estadística de interdependencia y de reducción de la dimensionalidad de los datos. Esta técnica tiene como propósito buscar el número mínimo de dimensiones capaces de explicar el máximo de información contenido en los datos. En este caso nos focalizamos en la varianza común. Aplicamos la técnica a nuestro trabajo. 
+Regresión Lineal Múltiple
+
+Para el trabajo presente también decidimos realizar dos modelos de regresión múltiple para comparar el valor explicativo de cada uno de estos. El primer modelo que realizamos tomó en cuenta los factores realizados (4), el segundo modelo tomó en cuenta todas las demás variables independientes. En última instancia, realizamos una tabla comparativa con ‘stargazer’ para visualizar y comparar cuál modelo de regresión nos ayudaba a explicar mejor la precariedad laboral de la población venezolana
+
+
+## Desarrollo
+
+```{r}
+names(ENPOVE)
+```
+
+```{r}
+library(tidyverse)
+enpove_subdata = ENPOVE %>%
+  select(P205_A,P611, P614_MON, P614_ESP, P615_MON, P615_ESP, P616_MON, P616_ESP)
+```
+
+```{r}
+enpove_subdata[,] = lapply(enpove_subdata[,], as.numeric)
+
+str(enpove_subdata)
+```
+
+```{r}
+enpove_subdata$P205_A[is.na(enpove_subdata$P205_A)] <- mean(enpove_subdata$P205_A,na.rm=TRUE)
+enpove_subdata$P611[is.na(enpove_subdata$P611)] <- mean(enpove_subdata$P611,na.rm=TRUE)
+enpove_subdata$P614_MON[is.na(enpove_subdata$P614_MON)] <- mean(enpove_subdata$P614_MON,na.rm=TRUE)
+enpove_subdata$P614_ESP[is.na(enpove_subdata$P614_ESP)] <- mean(enpove_subdata$P614_ESP,na.rm=TRUE)
+enpove_subdata$P615_MON[is.na(enpove_subdata$P615_MON)] <- mean(enpove_subdata$P615_MON,na.rm=TRUE)
+enpove_subdata$P615_ESP[is.na(enpove_subdata$P615_ESP)] <- mean(enpove_subdata$P615_ESP,na.rm=TRUE)
+enpove_subdata$P616_MON[is.na(enpove_subdata$P616_MON)] <- mean(enpove_subdata$P616_MON,na.rm=TRUE)
+enpove_subdata$P616_ESP[is.na(enpove_subdata$P616_ESP)] <- mean(enpove_subdata$P616_ESP,na.rm=TRUE)
+summary(enpove_subdata)
+```
+
+
+```{r}
+#install.packages("polycor")
+library(polycor)
+```
+
+```{r}
+library(psych)
+poly_cor = polycor::hetcor(enpove_subdata)
+poly_cor
+```
+```{r}
+corMatrix=poly_cor$correlations
+corMatrix
+```
+
+```{r}
+#install.packages("ggcorrplot")
+library(ggcorrplot)
+ggcorrplot(corMatrix,colors = c("#ff0000", "white", "#0000ff"))
+```
+
+```{r}
+library(psych)
+psych::KMO(enpove_subdata[,1:8]) 
+```
+
+```{r}
+cortest.bartlett(corMatrix,n=nrow(enpove_subdata[,1:3]))$p.value>0.05
+```
+
+
+```{r}
+fa.parallel(enpove_subdata[,1:8], fm="pa", fa="fa", main = "Scree Plot")
+```
+```{r}
+eigenf = eigen(cor(corMatrix, use="complete"))
+eigenf$values
+```
+
+```{r}
+itemsF_result <- fa(enpove_subdata[,3:8], cor = 'cor',
+                     nfactors=4, rotate = 'varimax',fm='minres')
+itemsF_result
+```
+
+```{r}
+print(itemsF_result$loadings, cutoff = 0.5)
+```
+
+```{r}
+sort(itemsF_result$communalities)
+```
+
+```{r}
+sort(itemsF_result$uniquenesses)
+```
+
+```{r}
+sort(itemsF_result$complexity)
+```
+
+```{r}
+fa.diagram(itemsF_result)
+```
+
+```{r}
+data_factores = cbind(enpove_subdata, as.data.frame(itemsF_result$scores))
+```
+
+```{r}
+library(BBmisc)
+enpove_subdata$uno = normalize(data_factores$MR1, 
+                       method = "range", 
+                       margin=2, # by column
+                       range = c(0, 100))
+
+enpove_subdata$dos = normalize(data_factores$MR2, 
+                       method = "range", 
+                       margin=2, # by column
+                       range = c(0, 100))
+
+enpove_subdata$tres = normalize(data_factores$MR3, 
+                       method = "range", 
+                       margin=2, # by column
+                       range = c(0, 100))
+
+enpove_subdata$cuatro = normalize(data_factores$MR4, 
+                       method = "range", 
+                       margin=2, # by column
+                       range = c(0, 100))
+```
+
+```{r}
+modelo1 = lm(ENPOVE$P614_MON ~ enpove_subdata$uno + enpove_subdata$dos + enpove_subdata$tres + enpove_subdata$cuatro)
+summary(modelo1)
+```
+Nuestro modelo segun la ganancia neta en monto
+
+## Modelo de Regresión lineal múltiple
+
+Modelo según la ganancia neta en monto
+
+```{r}
+modelo2= lm(P614_MON ~ P204 + P205_A + P501 +P512 + P315 +P513+ P408_1 + P408_2 + P408_3 +P408_4 
+            , data= ENPOVE) #Ingresos neto según sexo, edad, grado educativo, orientación sexual, situación migratoria y limitación permanente para caminar, ver, hablar y oír
+summary(modelo2)
+```
+p-value significativo, el modelo explica en un 3.84% el sueldo neto en monto
+
+
+# Hallazgos 
+
+En la presente sección, se analizarán los resultados obtenidos a partir del análisis factorial exploratorio por factor común y el modelo de regresión lineal múltiple seleccionado. Debido a los resultados obtenidos en el análisis factorial exploratorio, se realizaron 4 factores según lo que nos arrojó el método de sedimentación. De esta manera, se obtuvieron 4 factores. Además la variable que aporta más en común en relación a las otras es la de situacion migratoria 
+
+
+Por otra parte, respecto a la regresión lineal múltiple realizada con el fin de comprobar la hipótesis, se plantearon dos modelos de regresión distintos: en el primer modelo se incluyó a los cuatro factores creados. El segundo modelo incluyó todas las variables inicialmente propuestas. Después de esto, se obtuvo que el primer modelo de regresión que incluía a los 4 factores no era estadísticamente significativo.
+
+# Conclusiones 
+
+A partir de lo elaborado en el presente trabajo se ha buscado responder a la pregunta principal planteada: “¿Qué factores sociales y culturales inciden en la probabilidad de los inmigrantes venezolanos de conseguir un trabajo precario en Lima Metropolitana y Callao?" ; en ese sentido, se han utilizado dos análisis para poder buscar responder esta interrogante. En primer lugar, se realizó un Análisis Factorial Exploratorio que nos demostró como resultado las variables latentes que se agruparon en cuatro. 
+
+En segundo lugar, se realizó una regresión lineal múltiple, en el que a través de ella, se ha podido crear 2 modelos; sin embargo, se ha decidido por optar el modelo 1 que incluye a las variables. Considerando que para el trabajo el modelo que fue seleccionado fue el 1, se puede observar que se puede validar, parcialmente, la hipótesis formulada; ya que, se puede ver que los factores sociales y culturales inciden en la probabilidad de los inmigrantes venezolanos de conseguir un trabajo precario en Lima Metropolitana y Callao. 
+
+Esta investigación nos ha permitido tener una mejor percepción acerca de las variables que aportan a la probabilidad de los inmigrantes venezolanos de conseguir un trabajo precario en Lima Metropolitana y Callao. De esta manera, se puede observar que variables son importantes para poder estudiar la inmigración venezolana y que estas , también, si se desarrollan de manera positiva va a tener repercusiones en sus posibildiades de obtener sus trabajos. Sin embargo, este trabajo ha presentado sus limitaciones, debido a que, al no ser una investigación estadística extensa solo se puede observar de manera superficial las variables que van a tener influencia en la variable dependiente.
+
